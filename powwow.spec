@@ -38,6 +38,7 @@ install powwow.6 $RPM_BUILD_ROOT%{_mandir}/man6
 rm -rf $RPM_BUILD_ROOT
 
 %files
+%defattr(644,root,root,755)
 %{_bindir}
 %doc README{,.follow,.term} Changelog Compile.how Config.demo Hacking powwow.{doc,help}
 %{_mandir}/man*/powwow*
