@@ -8,6 +8,7 @@ Group:		Applications/Games
 Source0:	ftp://Linuz.sns.it/pub/Linux/ext-pack/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	fa04efd0920c14986ab44372e3e8ef18
 Patch0:		%{name}-time.patch
+BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,13 +26,16 @@ MUME.
 %patch0 -p1
 
 %build
-%{__make} CC="%{__cc}" CDEFS="%{rpmcflags} -DUSE_REGEXP" LDFLAGS="-lncurses %{rpmldflags}" powwow movie_play movie2ascii follow catrw
+%{__make} powwow movie_play movie2ascii follow catrw \
+	CC="%{__cc}" \
+	CDEFS="%{rpmcflags} -DUSE_REGEXP" \
+	LDFLAGS="-lncurses %{rpmldflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man6}
+
 install powwow movie{,2ascii,_play} make_it follow catrw $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man6
 install powwow.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
 %clean
@@ -39,6 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_bindir}
 %doc README{,.follow,.term} Changelog Compile.how Config.demo Hacking powwow.{doc,help}
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man*/powwow*
