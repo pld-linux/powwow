@@ -2,7 +2,7 @@ Summary:	powwow - MUD client
 Summary(pl):	powwow - klient MUD
 Name:		powwow
 Version:	1.2.0
-Release:	0
+Release:	0.1
 License:	GPL
 Group:		Applications/Games
 Source0:	ftp://Linuz.sns.it/pub/Linux/ext-pack/%{name}/%{name}-%{version}.tar.gz
@@ -24,15 +24,19 @@ MUME.
 %patch0 -p1
 
 %build
-%{__make} CC="%{__cc}" CDEFS="%{rpmcflags} -DUSE_REGEXP" LDFLAGS="-lncurses %{rpmldflags}" powwow
+%{__make} CC="%{__cc}" CDEFS="%{rpmcflags} -DUSE_REGEXP" LDFLAGS="-lncurses %{rpmldflags}" powwow movie_play movie2ascii follow catrw
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_sbindir}
+install -d $RPM_BUILD_ROOT%{_bindir}
+install powwow movie{,2ascii,_play} make_it follow catrw $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_mandir}/man6
+install powwow.6 $RPM_BUILD_ROOT%{_mandir}/man6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644,root,root,755)
-%doc README
+%{_bindir}
+%doc README{,.follow,.term} Changelog Compile.how Config.demo Hacking powwow.{doc,help}
+%{_mandir}/man*/powwow*
