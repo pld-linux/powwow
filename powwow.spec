@@ -6,6 +6,7 @@ Release:	0.1
 License:	GPL
 Group:		Applications/Games
 Source0:	ftp://Linuz.sns.it/pub/Linux/ext-pack/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	fa04efd0920c14986ab44372e3e8ef18
 Patch0:		%{name}-time.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
