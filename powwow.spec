@@ -8,6 +8,7 @@ Group:		Applications/Games
 Group(de):	Applikationen/Spiele
 Group(pl):	Aplikacje/Gry
 Source0:	ftp://Linuz.sns.it/pub/Linux/ext-pack/%{name}/%{name}-%{version}.tar.gz
+Patch0:		powwow-time.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,6 +23,7 @@ MUME.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} CC="%{__cc}" CDEFS="%{rpmcflags} -DUSE_REGEXP" LDFLAGS="-lncurses %{rpmldflags}" powwow
