@@ -6,7 +6,7 @@ Release:	0
 License:	GPL
 Group:		Applications/Games
 Source0:	ftp://Linuz.sns.it/pub/Linux/ext-pack/%{name}/%{name}-%{version}.tar.gz
-Patch0:		powwow-time.patch
+Patch0:		%{name}-time.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
