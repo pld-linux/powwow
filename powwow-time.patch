@@ -1,0 +1,88 @@
+diff -Naur powwow-1.2.0/edit.c powwow-1.2.0-mod/edit.c
+--- powwow-1.2.0/edit.c	Mon Oct  5 17:50:17 1998
++++ powwow-1.2.0-mod/edit.c	Tue Dec 25 03:29:36 2001
+@@ -25,6 +25,7 @@
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
++#include <time.h>
+ 
+ #include "defines.h"
+ #include "main.h"
+diff -Naur powwow-1.2.0/eval.c powwow-1.2.0-mod/eval.c
+--- powwow-1.2.0/eval.c	Mon Oct  5 17:54:07 1998
++++ powwow-1.2.0-mod/eval.c	Tue Dec 25 03:29:55 2001
+@@ -29,6 +29,7 @@
+ #include <sys/types.h>
+ #include <sys/time.h>
+ #include <limits.h>
++#include <time.h>
+ 
+ #include "defines.h"
+ #include "main.h"
+diff -Naur powwow-1.2.0/list.c powwow-1.2.0-mod/list.c
+--- powwow-1.2.0/list.c	Mon Oct  5 17:53:59 1998
++++ powwow-1.2.0-mod/list.c	Tue Dec 25 03:28:21 2001
+@@ -24,6 +24,7 @@
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
++#include <time.h>
+ 
+ #ifdef USE_REGEXP
+ # include "malloc.h"
+diff -Naur powwow-1.2.0/log.c powwow-1.2.0-mod/log.c
+--- powwow-1.2.0/log.c	Mon Oct  5 17:47:05 1998
++++ powwow-1.2.0-mod/log.c	Tue Dec 25 03:29:20 2001
+@@ -23,6 +23,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <time.h>
+ 
+ #include "defines.h"
+ #include "main.h"
+diff -Naur powwow-1.2.0/map.c powwow-1.2.0-mod/map.c
+--- powwow-1.2.0/map.c	Mon Oct  5 17:43:46 1998
++++ powwow-1.2.0-mod/map.c	Tue Dec 25 03:28:57 2001
+@@ -25,6 +25,7 @@
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <sys/time.h>
++#include <time.h>
+ 
+ #include "defines.h"
+ #include "main.h"
+diff -Naur powwow-1.2.0/ptr.c powwow-1.2.0-mod/ptr.c
+--- powwow-1.2.0/ptr.c	Mon Oct  5 17:53:45 1998
++++ powwow-1.2.0-mod/ptr.c	Tue Dec 25 03:30:22 2001
+@@ -22,6 +22,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <errno.h>
++#include <time.h>
+ 
+ #include "defines.h"
+ #include "main.h"
+diff -Naur powwow-1.2.0/tcp.c powwow-1.2.0-mod/tcp.c
+--- powwow-1.2.0/tcp.c	Mon Oct  5 17:41:37 1998
++++ powwow-1.2.0-mod/tcp.c	Tue Dec 25 03:27:31 2001
+@@ -30,6 +30,7 @@
+ #include <netinet/in.h>
+ #include <netinet/tcp.h>
+ #include <arpa/telnet.h>
++#include <time.h>
+ #ifndef TELOPT_NAWS
+ #  define TELOPT_NAWS 31
+ #endif
+diff -Naur powwow-1.2.0/utils.c powwow-1.2.0-mod/utils.c
+--- powwow-1.2.0/utils.c	Mon Oct  5 17:41:31 1998
++++ powwow-1.2.0-mod/utils.c	Tue Dec 25 03:26:55 2001
+@@ -26,6 +26,7 @@
+ #include <ctype.h>
+ #include <unistd.h>
+ #include <signal.h>
++#include <time.h>
+ 
+ #include "defines.h"
+ #include "main.h"
