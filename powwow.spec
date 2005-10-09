@@ -1,13 +1,13 @@
 Summary:	powwow - MUD client
 Summary(pl):	powwow - klient MUD
 Name:		powwow
-Version:	1.2.0
-Release:	0.1
+Version:	1.2.5
+Release:	1
 License:	GPL
 Group:		Applications/Games
-Source0:	ftp://Linuz.sns.it/pub/Linux/ext-pack/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	fa04efd0920c14986ab44372e3e8ef18
-Patch0:		%{name}-time.patch
+Source0:	http://linuz.sns.it/~max/powwow/%{name}-%{version}.tar.gz
+# Source0-md5:	704b94581b396d6ea17c00a5d1149ae1
+URL:		http://linuz.sns.it/~max/powwow/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,7 +23,6 @@ MUME.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__make} powwow movie_play movie2ascii follow catrw \
