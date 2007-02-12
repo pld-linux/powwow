@@ -1,5 +1,5 @@
 Summary:	powwow - MUD client
-Summary(pl):	powwow - klient MUD
+Summary(pl.UTF-8):   powwow - klient MUD
 Name:		powwow
 Version:	1.2.5
 Release:	1
@@ -16,9 +16,9 @@ A client to play MUDs. It has a lot of features that people commonly
 miss with telnet: just to say two, line editing and aliases. Developed
 on MUME mud. Too many people contributed to list them all here.
 
-%description -l pl
-Klient do gry w MUD-y. Ma wiele moøliwo∂ci, ktÛrych brakuje ludziom
-uøywaj±cym telneta: m.in. edycja linii i aliasy. Rozwijany z mudem
+%description -l pl.UTF-8
+Klient do gry w MUD-y. Ma wiele mo≈ºliwo≈õci, kt√≥rych brakuje ludziom
+u≈ºywajƒÖcym telneta: m.in. edycja linii i aliasy. Rozwijany z mudem
 MUME.
 
 %prep
