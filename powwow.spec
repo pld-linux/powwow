@@ -1,5 +1,5 @@
 Summary:	powwow - MUD client
-Summary(pl.UTF-8):   powwow - klient MUD
+Summary(pl.UTF-8):	powwow - klient MUD
 Name:		powwow
 Version:	1.2.5
 Release:	1
