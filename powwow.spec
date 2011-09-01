@@ -2,7 +2,7 @@ Summary:	powwow - MUD client
 Summary(pl.UTF-8):	powwow - klient MUD
 Name:		powwow
 Version:	1.2.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Games
 Source0:	http://linuz.sns.it/~max/powwow/%{name}-%{version}.tar.gz
